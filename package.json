@@ -1,0 +1,26 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "fooBar-dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w src/assets/sass/style.scss public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioana-vladau/fooBar-dashboard.git"
+  },
+  "keywords": [
+    "dashboard"
+  ],
+  "author": "Ioana Vladau-Babii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ioana-vladau/fooBar-dashboard/issues"
+  },
+  "homepage": "https://github.com/ioana-vladau/fooBar-dashboard#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
