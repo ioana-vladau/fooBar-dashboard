@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  body .hidden {
+    display: none !important; }
+  body .sidebar-custom {
+    background-color: black !important;
+    color: #F1F1F1 !important; }
+  body .active-link {
+    background-color: #CCCCCC;
+    color: black; }
+  body h1.bar-name {
+    text-align: center; }
+  body #navigate-to-dashboard {
+    margin-top: 1.6vh; }
+  body #piechart {
+    margin: 0 auto; }
+  body main {
+    padding: 2em;
+    margin-left: 12%;
+    height: 100vh; }
+    body main .tap-level {
+      width: 80vw;
+      height: 20vh;
+      background-color: white;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr); }
+  body #main-dashboard .stats-dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+    body #main-dashboard .stats-dashboard-container section {
+      display: flex;
+      justify-content: center; }
+      body #main-dashboard .stats-dashboard-container section span {
+        text-align: center; }
+  body #main-beer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em; }
+    body #main-beer .beer-details {
+      padding-top: 3em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+      body #main-beer .beer-details [class*="beer-details-category"] {
+        display: flex;
+        position: absolute;
+        margin-top: 1.5em;
+        background-color: #f4bf42;
+        width: 8em;
+        height: 3em;
+        align-self: flex-end;
+        align-items: center;
+        justify-content: center;
+        align-items: center; }
+      body #main-beer .beer-details [class*="beer-details-name"] {
+        font-size: 1.5em;
+        padding: 1em 0; }
+      body #main-beer .beer-details [class*="beer-details-alcohol"] {
+        font-size: 1.2em; }
+      body #main-beer .beer-details img {
+        width: 50%; }
+  body #main-storage .kegs-container {
+    margin-top: 8em; }
+    body #main-storage .kegs-container .kegs-levels-bars {
+      display: flex;
+      align-items: flex-end;
+      width: 90%;
+      margin: 0 auto; }
+      body #main-storage .kegs-container .kegs-levels-bars [class*="keg-amount-bar"] {
+        margin-left: 2em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+        body #main-storage .kegs-container .kegs-levels-bars [class*="keg-amount-bar"] [class*="keg-amount"] {
+          text-align: center;
+          margin-top: -2em; }
+    body #main-storage .kegs-container .kegs-levels-text {
+      display: flex;
+      width: 90%;
+      margin: 0 auto; }
+      body #main-storage .kegs-container .kegs-levels-text div {
+        margin-left: 2em;
+        width: 5vw; }
+      body #main-storage .kegs-container .kegs-levels-text [class*="keg-name"] {
+        text-align: center;
+        height: 3em;
+        transform: rotate(-20deg); }
+      body #main-storage .kegs-container .kegs-levels-text [class*="keg-amount"] {
+        display: block;
+        text-align: center; }
+      body #main-storage .kegs-container .kegs-levels-text [class*="keg-amount"] + p {
+        margin-top: 1em; }
+    body #main-storage .kegs-container .keg-levels-legend {
+      width: 30%;
+      margin: 0 auto;
+      display: flex;
+      margin-top: 5em; }
+      body #main-storage .kegs-container .keg-levels-legend .keg-levels-enough, body #main-storage .kegs-container .keg-levels-legend .keg-levels-buy {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 50px;
+        height: 30px; }
+      body #main-storage .kegs-container .keg-levels-legend .keg-levels-legend-each-color {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        body #main-storage .kegs-container .keg-levels-legend .keg-levels-legend-each-color p {
+          margin-left: 1em; }

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Dashboard FooBar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block sidebar-custom" style="width:12%">
+        <h3 class="w3-bar-item">FooBar</h3>
+        <a id="navigate-to-dashboard" href="index.html" class="w3-bar-item w3-button">
+            <i class="fas fa-tachometer-alt"></i>
+            Dashboard
+        </a>
+        <a id="navigate-to-storage" href="storage.html" class="w3-bar-item w3-button">
+            <i class="fas fa-hdd"></i>
+            Storage
+        </a>
+        <a id="navigate-to-beer" href="#" class="w3-bar-item w3-button">
+            <i class="fas fa-beer"></i>
+             Beer Details
+        </a>
+    </div>
+
+    <div class="w3-container w3-teal bar-name-container">
+        <h1 class="bar-name"></h1>
+    </div>
+    <!-- Page Content -->
+    <!-- Page Content -->
+        <main>
+            <!-- BAR NAME -->
+
+            <header>
+                <h1 class="bar-name"></h1>
+            </header>
+
+        <!-- DASHBOARD MAIN -->
+            <div id="main-dashboard">
+                <h1>Dashboard</h1>
+
+                <div class="stats-dashboard-container">
+                    <section><p>People in queue: <br><span class="people-in-queue"></span></p></section>
+                    <section><p>Customers served today: <br><span class="customers-served-today"></span></p></section>
+                    <section><p>Beers served today: <br><span class="beers-served-today"></span></p></section>
+                    <section><p>Avg beers per customer: <br><span class="avg-beers-per-customer"></span></p></section>
+                </div>
+
+                <div id="piechart" style="width: 900px; height: 500px;"></div>                
+
+                <section class="bartenders">
+                    <div class="bartender1"></div>
+                    <div class="bartender2"></div>
+                    <div class="bartender3"></div>
+                </section>
+
+                <br>
+
+            <!-- <template class="tapLevelTemplate">
+                <article>
+                    <h1 class="beer-name"></h1>
+                </article>
+            </template> -->
+            <h1>Tap Levels</h1>
+            <section class="tap-level">
+                <div class="tap-1">
+                    <p class="tap-1-name"></p>
+                    <p class="tap-1-percentage"></p>
+                </div>
+                <div class="tap-2">
+                    <p class="tap-2-name"></p>
+                    <p class="tap-2-percentage"></p>
+                </div>
+                <div class="tap-3">
+                    <p class="tap-3-name"></p>
+                    <p class="tap-3-percentage"></p>
+                </div>
+                <div class="tap-4">
+                    <p class="tap-4-name"></p>
+                    <p class="tap-4-percentage"></p>
+                </div>
+                <div class="tap-5">
+                    <p class="tap-5-name"></p>
+                    <p class="tap-5-percentage"></p>
+                </div>
+                <div class="tap-6">
+                    <p class="tap-6-name"></p>
+                    <p class="tap-6-percentage"></p>
+                </div>
+                <div class="tap-7">
+                    <p class="tap-7-name"></p>
+                    <p class="tap-7-percentage"></p>
+                </div>
+            </section>
+        <!-- 
+            <div id="beer-tap-1"></div>
+            <div id="beer-tap-2"></div>
+            <div id="beer-tap-3"></div> -->
+
+            <section>Closing time: <span class="closing-time"></span></section>
+            <section>Bar closes in: <span class="closing-time-hour"></span> <span class="closing-time-minutes"></span> minutes</section>
+        </div>
+
+        <div id="main-storage" class="hidden">
+            <h1>Kegs Left in Storage</h1>
+
+            <section id="kegs-list"></section>
+
+            <div class="kegs-container">
+                <div class="kegs-levels-bars">
+                    <div class="keg-amount-bar-1">
+                        <p class="keg-amount-1"></p>
+                    </div>
+                    <div class="keg-amount-bar-2">
+                        <p class="keg-amount-2"></p>
+                    </div>
+                    <div class="keg-amount-bar-3">
+                        <p class="keg-amount-3"></p>
+                    </div>
+                    <div class="keg-amount-bar-4">
+                        <p class="keg-amount-4"></p>
+                    </div>
+                    <div class="keg-amount-bar-5">
+                        <p class="keg-amount-5"></p>
+                    </div>
+                    <div class="keg-amount-bar-6">
+                        <p class="keg-amount-6"></p>
+                    </div>
+                    <div class="keg-amount-bar-7">
+                        <p class="keg-amount-7"></p>
+                    </div>
+                    <div class="keg-amount-bar-8">
+                        <p class="keg-amount-8"></p>
+                    </div>
+                    <div class="keg-amount-bar-9">
+                        <p class="keg-amount-9"></p>
+                    </div>
+                    <div class="keg-amount-bar-10">
+                        <p class="keg-amount-10"></p>
+                    </div>
+                </div>
+
+                <div class="kegs-levels-text">
+                    <div>
+                        <p class="keg-name-1"></p>
+                        <span class="keg-amount-1"></span>
+                        <!-- <p>kegs left in storage</p> -->
+                    </div>
+                    <div>
+                        <!-- <div class="keg-amount-bar-2"></div> -->
+                        <p class="keg-name-2"></p>
+                        <span class="keg-amount-2"></span>
+                        <!-- <p>kegs left in storage</p> -->
+                    </div>
+                    <div>
+                        <!-- <div class="keg-amount-bar-3"></div> -->
+                        <p class="keg-name-3"></p>
+                        <span class="keg-amount-3"></span>
+                        <!-- <p>kegs left in storage</p> -->
+                    </div>
+                    <div>
+                        <!-- <div class="keg-amount-bar-4"></div> -->
+                        <p class="keg-name-4"></p>
+                        <span class="keg-amount-4"></span>
+                        <!-- <p>kegs left in storage</p> -->
+                    </div>
+                    <div>
+                        <!-- <div class="keg-amount-bar-5"></div> -->
+                        <p class="keg-name-5"></p>
+                        <span class="keg-amount-5"></span>
+                        <!-- <p>kegs left in storage</p> -->
+                    </div>
+                    <div>
+                        <!-- <div class="keg-amount-bar-6"></div> -->
+                        <p class="keg-name-6"></p>
+                        <span class="keg-amount-6"></span>
+                        <!-- <p>kegs left in storage</p> -->
+                    </div>
+                    <div>
+                        <!-- <div class="keg-amount-bar-7"></div> -->
+                        <p class="keg-name-7"></p>
+                        <span class="keg-amount-7"></span>
+                        <!-- <p>kegs left in storage</p> -->
+                    </div>
+                    <div>
+                        <!-- <div class="keg-amount-bar-8"></div> -->
+                        <p class="keg-name-8"></p>
+                        <span class="keg-amount-8"></span>
+                        <!-- <p>kegs left in storage</p> -->
+                    </div>
+                    <div>
+                        <!-- <div class="keg-amount-bar-9"></div> -->
+                        <p class="keg-name-9"></p>
+                        <span class="keg-amount-9"></span>
+                        <!-- <p>kegs left in storage</p> -->
+                    </div>
+                    <div>
+                        <!-- <div class="keg-amount-bar-10"></div> -->
+                        <p class="keg-name-10"></p>
+                        <span class="keg-amount-10"></span>
+                        <!-- <p>kegs left in storage</p> -->
+                    </div>
+            </div>
+            <div class="keg-levels-legend">
+                <div class="keg-levels-legend-each-color">
+                    <div class="keg-levels-enough"></div>
+                    <p>Enough on Stock</p>
+                </div>
+                <div class="keg-levels-legend-each-color">
+                    <div class="keg-levels-buy"></div>
+                    <p>Time to Buy More</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        
+        <div id="main-beer" class="hidden">
+                <div class="beer-details">
+                    <span class="beer-details-category-1"></span>
+                    <img class="beer-details-img-1"/>
+                    <span class="beer-details-name-1"></span>
+                    <span><span class="beer-details-alcohol-1"></span>%</span>
+                </div>
+
+                <div class="beer-details">
+                    <span class="beer-details-category-2"></span>
+                    <img class="beer-details-img-2"/>
+                    <span class="beer-details-name-2"></span>
+                    <span><span class="beer-details-alcohol-2"></span>%</span>
+                </div>
+
+                <div class="beer-details">
+                    <span class="beer-details-category-3"></span>
+                    <img class="beer-details-img-3"/>
+                    <span class="beer-details-name-3"></span>
+                    <span><span class="beer-details-alcohol-3"></span>%</span>
+                </div>
+
+                <div class="beer-details">
+                    <span class="beer-details-category-4"></span>
+                    <img class="beer-details-img-4"/>
+                    <span class="beer-details-name-4"></span>
+                    <span><span class="beer-details-alcohol-4"></span>%</span>
+                </div>
+
+                <div class="beer-details">
+                    <span class="beer-details-category-5"></span>
+                    <img class="beer-details-img-5"/>
+                    <span class="beer-details-name-5"></span>
+                    <span><span class="beer-details-alcohol-5"></span>%</span>
+                </div>
+
+                <div class="beer-details">
+                    <span class="beer-details-category-6"></span>
+                    <img class="beer-details-img-6"/>
+                    <span class="beer-details-name-6"></span>
+                    <span><span class="beer-details-alcohol-6"></span>%</span>
+                </div>
+
+                <div class="beer-details">
+                    <span class="beer-details-category-7"></span>
+                    <img class="beer-details-img-7"/>
+                    <span class="beer-details-name-7"></span>
+                    <span><span class="beer-details-alcohol-7"></span>%</span>
+                </div>
+
+                <div class="beer-details">
+                    <span class="beer-details-category-8"></span>
+                    <img class="beer-details-img-8"/>
+                    <span class="beer-details-name-8"></span>
+                    <span><span class="beer-details-alcohol-8"></span>%</span>
+                </div>
+
+                <div class="beer-details">
+                    <span class="beer-details-category-9"></span>
+                    <img class="beer-details-img-9"/>
+                    <span class="beer-details-name-9"></span>
+                    <span><span class="beer-details-alcohol-9"></span>%</span>
+                </div>
+
+                <div class="beer-details">
+                    <span class="beer-details-category-10"></span>
+                    <img class="beer-details-img-10"/>
+                    <span class="beer-details-name-10"></span>
+                    <span><span class="beer-details-alcohol-10"></span>%</span>
+                </div>
+        </div>
+    </main>
+
+    <script src="http://petlatkea.dk/2018/front/foobar.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // source: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_sidebar_overlay
+        // function w3_open() {
+        //     document.getElementById("mySidebar").style.display = "block";
+        //     document.getElementById("myOverlay").style.display = "block";
+        // }           
+        // function w3_close() {
+        //     document.getElementById("mySidebar").style.display = "none";
+        //     document.getElementById("myOverlay").style.display = "none";
+        // }
+    </script>
+</body>
+</html>
