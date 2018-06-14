@@ -13,7 +13,7 @@
 
     <!-- Sidebar -->
     <div class="w3-sidebar w3-light-grey w3-bar-block sidebar-custom" style="width:12%">
-        <h3 class="w3-bar-item">FooBar</h3>
+        <h3 class="w3-bar-item"></h3>
         <a id="navigate-to-dashboard" href="index.html" class="w3-bar-item w3-button">
             <i class="fas fa-tachometer-alt"></i>
             Dashboard
@@ -24,90 +24,164 @@
         </a>
         <a id="navigate-to-beer" href="#" class="w3-bar-item w3-button">
             <i class="fas fa-beer"></i>
-             Beer Details
+             Beers
         </a>
     </div>
 
     <div class="w3-container w3-teal bar-name-container">
-        <h1 class="bar-name"></h1>
+        <!-- <h1 class="bar-name"></h1> -->
     </div>
-    <!-- Page Content -->
-    <!-- Page Content -->
+
+
         <main>
-            <!-- BAR NAME -->
-
-            <header>
+            <!-- <header>
                 <h1 class="bar-name"></h1>
-            </header>
+            </header> -->
 
-        <!-- DASHBOARD MAIN -->
             <div id="main-dashboard">
-                <h1>Dashboard</h1>
+                <div class="main-dashboard-stats">
+                    <h1>Live Stats</h1>
+                    <hr/>
 
-                <div class="stats-dashboard-container">
-                    <section><p>People in queue: <br><span class="people-in-queue"></span></p></section>
-                    <section><p>Customers served today: <br><span class="customers-served-today"></span></p></section>
-                    <section><p>Beers served today: <br><span class="beers-served-today"></span></p></section>
-                    <section><p>Avg beers per customer: <br><span class="avg-beers-per-customer"></span></p></section>
+                    <div class="stats-dashboard-container">
+                            <section>
+                                <p>
+                                    <span class="people-in-queue"></span><br>
+                                    People in Queue</p>
+                                </section>
+                            <section>
+                                <p>
+                                    <span class="customers-served-today"></span><br>
+                                    Customers Served Today
+                                </p>
+                            </section>
+                            <section>
+                                <p>
+                                    <span class="beers-served-today"></span><br>
+                                    Beers Served Today
+                                </p>
+                            </section>
+                            <section>
+                                <p>
+                                    <span class="avg-beers-per-customer"></span><br>
+                                    Avg Beers/Customer
+                                </p>
+                            </section>
+                    </div>
                 </div>
 
-                <div id="piechart" style="width: 900px; height: 500px;"></div>                
+
+            <div class="bartenders-dashboard">
+                <h1>Bartenders Today</p>
+                <hr/>
 
                 <section class="bartenders">
-                    <div class="bartender1"></div>
-                    <div class="bartender2"></div>
-                    <div class="bartender3"></div>
+                    <div>
+                        <div><img src="" class="bartender-img-1" alt=""></div>
+                        <p class="bartender-name-1"></p>
+                        <p class="bartender-status-1"></p>
+                    </div>
+                    <div>
+                        <div><img src="" class="bartender-img-2" alt=""></div>
+                        <p class="bartender-name-2"></p>
+                        <p class="bartender-status-2"></p>
+                    </div>
+                    <div>
+                        <div><img src="" class="bartender-img-3" alt=""></div>
+                        <p class="bartender-name-3"></p>
+                        <p class="bartender-status-3"></p>
+                    </div>
                 </section>
+            </div>
 
-                <br>
+                <hr/>
+                <div class="chart-dashboard">
+                    <h1>Beer Popularity</h1>
+                    <hr/>
+                    <div id="piechart" style="width: 900px; height: 500px;"></div>                
+                    <br>
+                </div>
 
-            <!-- <template class="tapLevelTemplate">
-                <article>
-                    <h1 class="beer-name"></h1>
-                </article>
-            </template> -->
-            <h1>Tap Levels</h1>
-            <section class="tap-level">
-                <div class="tap-1">
-                    <p class="tap-1-name"></p>
-                    <p class="tap-1-percentage"></p>
-                </div>
-                <div class="tap-2">
-                    <p class="tap-2-name"></p>
-                    <p class="tap-2-percentage"></p>
-                </div>
-                <div class="tap-3">
-                    <p class="tap-3-name"></p>
-                    <p class="tap-3-percentage"></p>
-                </div>
-                <div class="tap-4">
-                    <p class="tap-4-name"></p>
-                    <p class="tap-4-percentage"></p>
-                </div>
-                <div class="tap-5">
-                    <p class="tap-5-name"></p>
-                    <p class="tap-5-percentage"></p>
-                </div>
-                <div class="tap-6">
-                    <p class="tap-6-name"></p>
-                    <p class="tap-6-percentage"></p>
-                </div>
-                <div class="tap-7">
-                    <p class="tap-7-name"></p>
-                    <p class="tap-7-percentage"></p>
-                </div>
-            </section>
+            <hr/>
+
+            <div class="taps-dashboard">
+                <h1>Tap Levels</h1>
+                <hr/>
+                <div id="chart_div"></div>                
+                <!-- <div class="taps-graph">
+                    <div class="tap-full-bar">
+                        <div class="tap-1-bar">
+                            <span class="tap-1-name"></span>
+                            <span class="tap-1-percentage"></span>
+                        </div>
+                    </div>
+                    <div class="tap-2-bar">
+                            <span class="tap-2-name"></span>
+
+                    </div>
+                    <div class="tap-1-bar"></div>
+                    <div class="tap-2-bar"></div>
+                    <div class="tap-3-bar"></div>
+                    <div class="tap-4-bar"></div>
+                    <div class="tap-5-bar"></div>
+                    <div class="tap-6-bar"></div>
+                    <div class="tap-7-bar"></div>
+                </div> -->
+
+                <!-- <section class="tap-level">
+                    <div class="tap-1">
+                        <p class="tap-1-name"></p>
+                        <p class="tap-1-percentage"></p>
+                        <p class="tap-1-bar"></p>
+                    </div>
+                    <div class="tap-2">
+                        <p class="tap-2-name"></p>
+                        <p class="tap-2-percentage"></p>
+                        <p class="tap-2-bar"></p>
+                    </div>
+                    <div class="tap-3">
+                        <p class="tap-3-name"></p>
+                        <p class="tap-3-percentage"></p>
+                        <p class="tap-3-bar"></p>
+                    </div>
+                    <div class="tap-4">
+                        <p class="tap-4-name"></p>
+                        <p class="tap-4-percentage"></p>
+                        <p class="tap-4-bar"></p>
+                    </div>
+                    <div class="tap-5">
+                        <p class="tap-5-name"></p>
+                        <p class="tap-5-percentage"></p>
+                        <p class="tap-5-bar"></p>
+                    </div>
+                    <div class="tap-6">
+                        <p class="tap-6-name"></p>
+                        <p class="tap-6-percentage"></p>
+                        <p class="tap-6-bar"></p>
+                    </div>
+                    <div class="tap-7">
+                        <p class="tap-7-name"></p>
+                        <p class="tap-7-percentage"></p>
+                        <p class="tap-7-bar"></p>
+                    </div>
+                </section> -->
+            </div>
         <!-- 
             <div id="beer-tap-1"></div>
             <div id="beer-tap-2"></div>
             <div id="beer-tap-3"></div> -->
-
-            <section>Closing time: <span class="closing-time"></span></section>
-            <section>Bar closes in: <span class="closing-time-hour"></span> <span class="closing-time-minutes"></span> minutes</section>
+            <hr/>
+            <div class="time-dashboard">
+                <h1>Closing Time</h1>
+                <hr/>
+                <section>Closing time: <span class="closing-time"></span></section>
+                <section><span class="closing-time-hour"></span> hours <span class="closing-time-minutes"></span> minutes until closing</section>
+            </div>
         </div>
 
         <div id="main-storage" class="hidden">
             <h1>Kegs Left in Storage</h1>
+            <hr/>
 
             <section id="kegs-list"></section>
 
@@ -219,78 +293,145 @@
         </div>
         </div>
 
-        
-        <div id="main-beer" class="hidden">
-                <div class="beer-details">
-                    <span class="beer-details-category-1"></span>
-                    <img class="beer-details-img-1"/>
-                    <span class="beer-details-name-1"></span>
-                    <span><span class="beer-details-alcohol-1"></span>%</span>
-                </div>
 
-                <div class="beer-details">
+        <div id="main-beer" class="hidden">
+            <h1>Beers</h1>
+            <hr/>
+
+            <!-- <div class="beer-details">
                     <span class="beer-details-category-2"></span>
                     <img class="beer-details-img-2"/>
                     <span class="beer-details-name-2"></span>
-                    <span><span class="beer-details-alcohol-2"></span>%</span>
+                    <span><span class="beer-details-alcohol-2"></span></span>
+                    <p class="beer-description-2"></p>
+            </div> -->
+
+            <div class="beers-table">
+                <div class="beer-details">
+                    <div>
+                        <img class="beer-details-img-1"/>
+                    </div>
+                    <div>
+                        <p class="beer-details-alcohol-1"></p>
+                        <p class="beer-details-name-1"></p>
+                        <p class="beer-details-category-1"></p>
+                        <p class="beer-description-1"></p>
+                    </div>
                 </div>
 
                 <div class="beer-details">
-                    <span class="beer-details-category-3"></span>
-                    <img class="beer-details-img-3"/>
-                    <span class="beer-details-name-3"></span>
-                    <span><span class="beer-details-alcohol-3"></span>%</span>
+                    <div>
+                        <img class="beer-details-img-2"/>
+                    </div>
+                    <div>
+                        <p class="beer-details-alcohol-2"></p>
+                        <p class="beer-details-name-2"></p>
+                        <p class="beer-details-category-2"></p>
+                        <p class="beer-description-2"></p>
+                    </div>
                 </div>
 
                 <div class="beer-details">
-                    <span class="beer-details-category-4"></span>
-                    <img class="beer-details-img-4"/>
-                    <span class="beer-details-name-4"></span>
-                    <span><span class="beer-details-alcohol-4"></span>%</span>
+                    <div>
+                        <img class="beer-details-img-3"/>
+                    </div>
+                    <div>
+                        <p class="beer-details-alcohol-3"></p>
+                        <p class="beer-details-name-3"></p>
+                        <p class="beer-details-category-3"></p>
+                        <p class="beer-description-3"></p>
+                    </div>
                 </div>
 
                 <div class="beer-details">
-                    <span class="beer-details-category-5"></span>
-                    <img class="beer-details-img-5"/>
-                    <span class="beer-details-name-5"></span>
-                    <span><span class="beer-details-alcohol-5"></span>%</span>
+                    <div>
+                        <img class="beer-details-img-4"/>
+                    </div>
+                    <div>
+                        <p class="beer-details-alcohol-4"></p>
+                        <p class="beer-details-name-4"></p>
+                        <p class="beer-details-category-4"></p>
+                        <p class="beer-description-4"></p>
+                    </div>
                 </div>
 
                 <div class="beer-details">
-                    <span class="beer-details-category-6"></span>
-                    <img class="beer-details-img-6"/>
-                    <span class="beer-details-name-6"></span>
-                    <span><span class="beer-details-alcohol-6"></span>%</span>
+                    <div>
+                        <img class="beer-details-img-5"/>
+                    </div>
+                    <div>
+                        <p class="beer-details-alcohol-5"></p>
+                        <p class="beer-details-name-5"></p>
+                        <p class="beer-details-category-5"></p>
+                        <p class="beer-description-5"></p>
+                    </div>
                 </div>
 
                 <div class="beer-details">
-                    <span class="beer-details-category-7"></span>
-                    <img class="beer-details-img-7"/>
-                    <span class="beer-details-name-7"></span>
-                    <span><span class="beer-details-alcohol-7"></span>%</span>
+                    <div>
+                        <img class="beer-details-img-6"/>
+                    </div>
+                    <div>
+                        <p class="beer-details-alcohol-6"></p>
+                        <p class="beer-details-name-6"></p>
+                        <p class="beer-details-category-6"></p>
+                        <p class="beer-description-6"></p>
+                    </div>
                 </div>
 
                 <div class="beer-details">
-                    <span class="beer-details-category-8"></span>
-                    <img class="beer-details-img-8"/>
-                    <span class="beer-details-name-8"></span>
-                    <span><span class="beer-details-alcohol-8"></span>%</span>
+                    <div>
+                        <img class="beer-details-img-7"/>
+                    </div>
+                    <div>
+                        <p class="beer-details-alcohol-7"></p>
+                        <p class="beer-details-name-7"></p>
+                        <p class="beer-details-category-7"></p>
+                        <p class="beer-description-7"></p>
+                    </div>
                 </div>
 
                 <div class="beer-details">
-                    <span class="beer-details-category-9"></span>
-                    <img class="beer-details-img-9"/>
-                    <span class="beer-details-name-9"></span>
-                    <span><span class="beer-details-alcohol-9"></span>%</span>
+                    <div>
+                        <img class="beer-details-img-8"/>
+                    </div>
+                    <div>
+                        <p class="beer-details-alcohol-8"></p>
+                        <p class="beer-details-name-8"></p>
+                        <p class="beer-details-category-8"></p>
+                        <p class="beer-description-8"></p>
+                    </div>
                 </div>
 
                 <div class="beer-details">
-                    <span class="beer-details-category-10"></span>
-                    <img class="beer-details-img-10"/>
-                    <span class="beer-details-name-10"></span>
-                    <span><span class="beer-details-alcohol-10"></span>%</span>
+                    <div>
+                        <img class="beer-details-img-9"/>
+                    </div>
+                    <div>
+                        <p class="beer-details-alcohol-9"></p>
+                        <p class="beer-details-name-9"></p>
+                        <p class="beer-details-category-9"></p>
+                        <p class="beer-description-9"></p>
+                    </div>
                 </div>
+
+                <div class="beer-details">
+                    <div>
+                        <img class="beer-details-img-10"/>
+                    </div>
+                    <div>
+                        <p class="beer-details-alcohol-10"></p>
+                        <p class="beer-details-name-10"></p>
+                        <p class="beer-details-category-10"></p>
+                        <p class="beer-description-10"></p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- <canvas id="my-canvas"></canvas> -->
+        <footer>Ioana Vladau-Babii, KEA Elective Exam, 3rd sem, June 2018</footer>
+
     </main>
 
     <script src="http://petlatkea.dk/2018/front/foobar.js"></script>
@@ -306,5 +447,11 @@
         //     document.getElementById("myOverlay").style.display = "none";
         // }
     </script>
+
+    <!-- <script>
+        var confettiSettings = { target: 'my-canvas' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    </script> -->
 </body>
 </html>
