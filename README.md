@@ -16,4 +16,4 @@
 * Concatenate, obfuscate etc
 * Could have added *read more* buttons for more beer details 
 
-== Thank you for such a great elective!==
+###Thank you for such a great elective!

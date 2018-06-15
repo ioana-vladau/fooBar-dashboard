@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<body>
     <!-- Sidebar -->
     <div class="w3-sidebar w3-light-grey w3-bar-block sidebar-custom" style="width:12%">
         <h3 class="w3-bar-item"></h3>
@@ -28,48 +29,40 @@
         </a>
     </div>
 
-    <div class="w3-container w3-teal bar-name-container">
-        <!-- <h1 class="bar-name"></h1> -->
-    </div>
+    <div class="w3-container w3-teal bar-name-container"></div>
 
-
-        <main>
-            <!-- <header>
-                <h1 class="bar-name"></h1>
-            </header> -->
-
+    <main>
             <div id="main-dashboard">
                 <div class="main-dashboard-stats">
                     <h1>Live Stats</h1>
                     <hr/>
 
                     <div class="stats-dashboard-container">
-                            <section>
-                                <p>
-                                    <span class="people-in-queue"></span><br>
-                                    People in Queue</p>
-                                </section>
-                            <section>
-                                <p>
-                                    <span class="customers-served-today"></span><br>
-                                    Customers Served Today
-                                </p>
+                        <section>
+                            <p>
+                                <span class="people-in-queue"></span><br>
+                                People in Queue</p>
                             </section>
-                            <section>
-                                <p>
-                                    <span class="beers-served-today"></span><br>
-                                    Beers Served Today
-                                </p>
-                            </section>
-                            <section>
-                                <p>
-                                    <span class="avg-beers-per-customer"></span><br>
-                                    Avg Beers/Customer
-                                </p>
-                            </section>
+                        <section>
+                            <p>
+                                <span class="customers-served-today"></span><br>
+                                Customers Served Today
+                            </p>
+                        </section>
+                        <section>
+                            <p>
+                                <span class="beers-served-today"></span><br>
+                                Beers Served Today
+                            </p>
+                        </section>
+                        <section>
+                            <p>
+                                <span class="avg-beers-per-customer"></span><br>
+                                Avg Beers/Customer
+                            </p>
+                        </section>
                     </div>
                 </div>
-
 
             <div class="bartenders-dashboard">
                 <h1>Bartenders Today</p>
@@ -94,88 +87,39 @@
                 </section>
             </div>
 
-                <hr/>
-                <div class="chart-dashboard">
-                    <h1>Beer Popularity</h1>
-                    <hr/>
-                    <div id="piechart" style="width: 900px; height: 500px;"></div>                
-                    <br>
-                </div>
-
             <hr/>
-
             <div class="taps-dashboard">
                 <h1>Tap Levels</h1>
                 <hr/>
                 <div id="chart_div"></div>                
-                <!-- <div class="taps-graph">
-                    <div class="tap-full-bar">
-                        <div class="tap-1-bar">
-                            <span class="tap-1-name"></span>
-                            <span class="tap-1-percentage"></span>
-                        </div>
-                    </div>
-                    <div class="tap-2-bar">
-                            <span class="tap-2-name"></span>
-
-                    </div>
-                    <div class="tap-1-bar"></div>
-                    <div class="tap-2-bar"></div>
-                    <div class="tap-3-bar"></div>
-                    <div class="tap-4-bar"></div>
-                    <div class="tap-5-bar"></div>
-                    <div class="tap-6-bar"></div>
-                    <div class="tap-7-bar"></div>
-                </div> -->
-
-                <!-- <section class="tap-level">
-                    <div class="tap-1">
-                        <p class="tap-1-name"></p>
-                        <p class="tap-1-percentage"></p>
-                        <p class="tap-1-bar"></p>
-                    </div>
-                    <div class="tap-2">
-                        <p class="tap-2-name"></p>
-                        <p class="tap-2-percentage"></p>
-                        <p class="tap-2-bar"></p>
-                    </div>
-                    <div class="tap-3">
-                        <p class="tap-3-name"></p>
-                        <p class="tap-3-percentage"></p>
-                        <p class="tap-3-bar"></p>
-                    </div>
-                    <div class="tap-4">
-                        <p class="tap-4-name"></p>
-                        <p class="tap-4-percentage"></p>
-                        <p class="tap-4-bar"></p>
-                    </div>
-                    <div class="tap-5">
-                        <p class="tap-5-name"></p>
-                        <p class="tap-5-percentage"></p>
-                        <p class="tap-5-bar"></p>
-                    </div>
-                    <div class="tap-6">
-                        <p class="tap-6-name"></p>
-                        <p class="tap-6-percentage"></p>
-                        <p class="tap-6-bar"></p>
-                    </div>
-                    <div class="tap-7">
-                        <p class="tap-7-name"></p>
-                        <p class="tap-7-percentage"></p>
-                        <p class="tap-7-bar"></p>
-                    </div>
-                </section> -->
             </div>
-        <!-- 
-            <div id="beer-tap-1"></div>
-            <div id="beer-tap-2"></div>
-            <div id="beer-tap-3"></div> -->
+
+            <hr/>
+            <div class="chart-dashboard">
+                <h1>Beer Popularity</h1>
+                <hr/>
+                <div id="piechart" style="width: 900px; height: 500px;"></div>                
+                <br>
+            </div>
+
             <hr/>
             <div class="time-dashboard">
                 <h1>Closing Time</h1>
                 <hr/>
-                <section>Closing time: <span class="closing-time"></span></section>
-                <section><span class="closing-time-hour"></span> hours <span class="closing-time-minutes"></span> minutes until closing</section>
+                <div class="show-time">
+                    <section>
+                        <p>Closing time: </p>
+                        <span class="closing-time"></span>
+                    </section>
+                    <section>
+                        <p>Current time: </p>
+                        <span class="current-time"></span>
+                    </section>
+                    <section>
+                        <p>Bar closes in</p>
+                        <span class="closing-status"></span>
+                    </section>
+                </div>
             </div>
         </div>
 
@@ -223,61 +167,42 @@
                     <div>
                         <p class="keg-name-1"></p>
                         <span class="keg-amount-1"></span>
-                        <!-- <p>kegs left in storage</p> -->
                     </div>
                     <div>
-                        <!-- <div class="keg-amount-bar-2"></div> -->
                         <p class="keg-name-2"></p>
                         <span class="keg-amount-2"></span>
-                        <!-- <p>kegs left in storage</p> -->
                     </div>
                     <div>
-                        <!-- <div class="keg-amount-bar-3"></div> -->
                         <p class="keg-name-3"></p>
                         <span class="keg-amount-3"></span>
-                        <!-- <p>kegs left in storage</p> -->
                     </div>
                     <div>
-                        <!-- <div class="keg-amount-bar-4"></div> -->
                         <p class="keg-name-4"></p>
                         <span class="keg-amount-4"></span>
-                        <!-- <p>kegs left in storage</p> -->
                     </div>
                     <div>
-                        <!-- <div class="keg-amount-bar-5"></div> -->
                         <p class="keg-name-5"></p>
                         <span class="keg-amount-5"></span>
-                        <!-- <p>kegs left in storage</p> -->
                     </div>
                     <div>
-                        <!-- <div class="keg-amount-bar-6"></div> -->
                         <p class="keg-name-6"></p>
                         <span class="keg-amount-6"></span>
-                        <!-- <p>kegs left in storage</p> -->
                     </div>
                     <div>
-                        <!-- <div class="keg-amount-bar-7"></div> -->
                         <p class="keg-name-7"></p>
                         <span class="keg-amount-7"></span>
-                        <!-- <p>kegs left in storage</p> -->
                     </div>
                     <div>
-                        <!-- <div class="keg-amount-bar-8"></div> -->
                         <p class="keg-name-8"></p>
                         <span class="keg-amount-8"></span>
-                        <!-- <p>kegs left in storage</p> -->
                     </div>
                     <div>
-                        <!-- <div class="keg-amount-bar-9"></div> -->
                         <p class="keg-name-9"></p>
                         <span class="keg-amount-9"></span>
-                        <!-- <p>kegs left in storage</p> -->
                     </div>
                     <div>
-                        <!-- <div class="keg-amount-bar-10"></div> -->
                         <p class="keg-name-10"></p>
                         <span class="keg-amount-10"></span>
-                        <!-- <p>kegs left in storage</p> -->
                     </div>
             </div>
             <div class="keg-levels-legend">
@@ -297,14 +222,6 @@
         <div id="main-beer" class="hidden">
             <h1>Beers</h1>
             <hr/>
-
-            <!-- <div class="beer-details">
-                    <span class="beer-details-category-2"></span>
-                    <img class="beer-details-img-2"/>
-                    <span class="beer-details-name-2"></span>
-                    <span><span class="beer-details-alcohol-2"></span></span>
-                    <p class="beer-description-2"></p>
-            </div> -->
 
             <div class="beers-table">
                 <div class="beer-details">
@@ -436,18 +353,6 @@
 
     <script src="http://petlatkea.dk/2018/front/foobar.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        // source: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_sidebar_overlay
-        // function w3_open() {
-        //     document.getElementById("mySidebar").style.display = "block";
-        //     document.getElementById("myOverlay").style.display = "block";
-        // }           
-        // function w3_close() {
-        //     document.getElementById("mySidebar").style.display = "none";
-        //     document.getElementById("myOverlay").style.display = "none";
-        // }
-    </script>
-
     <!-- <script>
         var confettiSettings = { target: 'my-canvas' };
         var confetti = new ConfettiGenerator(confettiSettings);

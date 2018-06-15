@@ -103,8 +103,17 @@ body {
         margin-left: 5px; }
   body .time-dashboard {
     padding-bottom: 3em; }
-    body .time-dashboard section {
-      margin-left: 2em; }
+    body .time-dashboard .show-time {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      width: 50%;
+      margin: 0 auto; }
+      body .time-dashboard .show-time section {
+        margin-left: 2em; }
+        body .time-dashboard .show-time section > span {
+          font-size: 2em;
+          margin-top: -1em; }
   body #main-beer {
     background-color: white;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);

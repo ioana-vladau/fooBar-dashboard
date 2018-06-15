@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -w src/assets/sass/style.scss public/css/style.css"
+    "sass": "node-sass -w src/assets/sass/style.scss dist/css/style.css"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "homepage": "https://github.com/ioana-vladau/fooBar-dashboard#readme",
   "devDependencies": {
     "node-sass": "^4.9.0"
+  },
+  "dependencies": {
+    "confetti-js": "0.0.11",
+    "materialize-css": "^1.0.0-rc.1"
   }
 }
