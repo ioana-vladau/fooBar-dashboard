@@ -6,9 +6,14 @@
     * Functions with/without parameters
     * .filter, .map
 * CSS Selectors
+* Google Chrome DevTools Debugger 
+* Learnt about markdown!
 
 ## What I Could Have Done Better
-* Fetch often only the data that needs to be updated
+* Managing better what I fetch, when and how often
 * Improved design and responsiveness
 * A better code structure/file structure
+* Concatenate, obfuscate etc
 * Could have added *read more* buttons for more beer details 
+
+== Thank you for such a great elective!==
