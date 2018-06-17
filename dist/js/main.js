@@ -33,7 +33,8 @@ window.addEventListener("DOMContentLoaded", ()=>{
     }, 7000);  
 });
 
-
+//depending on which HTML element the user clicks, hide the other mains
+//single page website - like
 function navigationLinks(){
     let navigationLinks = ["dashboard", "storage", "beer"];
 
@@ -66,15 +67,19 @@ function navigationLinks(){
     }
 }
 
+// init function does not make a lot of sense now because it contains only one function, but 
+// if I had more init functions, it would definitely help keep them together
 function init(data){
     initBeerPopularity(data);
 }
 
+// data shown on first load
 function buildData(allData){
     showBarName(allData.bar);
     showClosingTime(allData.bar);
 }
 
+// data that refreshes every 7 seconds
 function refreshData(allData){
     showBeerLevel(allData.taps);
     showBartenders(allData.bartenders);
@@ -88,6 +93,7 @@ function refreshData(allData){
     showAvgBeersPerCustomer(allData);
 }
 
+// initialize beer popularity object with the initial popularities that are 1 and the beer names
 function initBeerPopularity(data){
     //console.log(data.beernames)
     for(let i=0; i<data.beertypes.length; i++){
@@ -98,10 +104,14 @@ function initBeerPopularity(data){
     }
 }
 
+// function to display bar name
 function showBarName(bar){
     document.querySelector(".w3-bar-item").innerHTML = bar.name;
 }
 
+
+// declared the variable here because it helped me visualize better while working on the function
+// calculate the beer level left
 let headerTaps = [];
 function showBeerLevel(taps){
     headerTaps= [["Beer", "% left"]]
@@ -113,6 +123,7 @@ function showBeerLevel(taps){
     });
 };
 
+// add here the image names + extensions that will be concatenated to the src
 let bartenderImgs = ["peter.png", "jonas.png", "martin.png"];
 function showBartenders(bartenders){
     bartenders.forEach((bartender,i)=>{
@@ -132,10 +143,12 @@ function showBartenders(bartenders){
         }
 
         document.querySelector("." + bartenderStatus).innerHTML = `${bartender.status}`;
+        // change here if path is different
         document.querySelector("." + bartenderImg).src = "gfx\/bartenders\/" + bartenderImgs[i];
     });
 };
 
+// calculate how much time is left until bar closes
 function showClosingTime(time){
 
     let closingTime = time.closingTime;
@@ -166,6 +179,7 @@ function showClosingTime(time){
     }
 }
 
+// grab the data for how many people there are in queue at every fetch
 function showPeopleInQueue(people){
     document.querySelector(".people-in-queue").innerHTML = people.length;
 }
@@ -174,11 +188,14 @@ function showPeopleInQueue(people){
 let lastServedCustomerId = -1;
 function showBeersServedToday(serving){
     serving.forEach(customer=>{
+        // add the beers only if the customer has not been already served
         if(customer.id > lastServedCustomerId){
             beersServedToday += customer.order.length;
         }
     });
 
+    // if there are beers in the order, the lastServedCustomerId will be grabbed from the last customer
+    // serving.length-1 because array starts from 0
     if(serving.length>0){
         lastServedCustomerId=serving[serving.length-1].id;
     }
@@ -186,17 +203,22 @@ function showBeersServedToday(serving){
     document.querySelector(".beers-served-today").innerHTML = beersServedToday;
 }
 
+
+// one of the hardest functions to make
 function showBeerPopularity(data){
-    
     for(let i=0; i<data.queue.length; i++){
         const customer = data.queue[i];
+        // if the customer has not already been there
         if(lastCustomerId < customer.id){
+            //for each customer and for each beer
             for(let j=0; j<customer.order.length; j++){
                 //.log("add +1 to popul at beer " + customer.order[j]);
+                // populate popObj with the name of the beer
                 const popObj = popul.find(obj=>
                     //if it's true then it will return it in the popul
                     obj.name === customer.order[j]    
                 );
+                // add popularity to that beer
                 popObj.popularity++;
                // popul.name = data.queue[i].order[j];
                // popul.popularity++;
@@ -207,16 +229,20 @@ function showBeerPopularity(data){
     }
 }
 
+// a little hard to make as well, would not work if the ids would not be consecutive numbers
 function showCustomersServed(customers){
+    // the if is just there to avoid throwing an error because there are no people in queue
     if(customers.length > 0 && customers[0].id) {
         let lastCustomerId = customers[customers.length-1].id + 1;
+        // customersServedToday will become the id of the first person in queue
         customersServedToday =  customers[0].id;
     }
     document.querySelector(".customers-served-today").innerHTML = customersServedToday;
 }
 
 function showStorage(storage){
-    // I will not use a template, as I know the exact number of kegs (Peter recommended to do in html, rather than js)
+    // I will not use a template, as I know the exact number of kegs 
+    // (Peter recommended to do in html, rather than js)
 
     storage.forEach((keg,i)=>{
         document.querySelector(".keg-name-" + (i+1)).innerHTML = keg.name;
@@ -244,6 +270,8 @@ function showBeerDetails(beertypes){
         document.querySelector(".beer-details-name-" + (i+1)).innerHTML = beertypes[i].name;
         document.querySelector(".beer-details-category-" + (i+1)).innerHTML = beertypes[i].category;
         document.querySelector(".beer-details-alcohol-" + (i+1)).innerHTML = alc + " %";
+
+        // depending on the amount of alcohol, show different label colors
         if(alc>=4 && alc <=6){
             document.querySelector(".beer-details-alcohol-" + (i+1)).style.backgroundColor = "#9BC3EF"; //blue
         } else if(alc>6 && alc <=8){
@@ -254,6 +282,7 @@ function showBeerDetails(beertypes){
             document.querySelector(".beer-details-alcohol-" + (i+1)).style.backgroundColor = "#F06B50"; //red
         }
         
+        // change here if path is different
         document.querySelector(".beer-details-img-" + (i+1)).src = "gfx\/beer-labels\/" + beerImgs[i];
         document.querySelector(".beer-description-" + (i+1)).innerHTML = beertypes[i].description.overallImpression;
     }
@@ -261,6 +290,7 @@ function showBeerDetails(beertypes){
 }
 
 function showAvgBeersPerCustomer(){
+    // if no beers served
     if(!beersServedToday/customersServedToday){
         document.querySelector(".avg-beers-per-customer").innerHTML = 0;
     } else {
@@ -278,7 +308,7 @@ function drawChart() {
     });
 
     let header = [["beer name", "popularity"]];
-    let concatenated = header.concat(output);
+    let concatenated = header.concat(output); // to have google's structure
 
     var data =  google.visualization.arrayToDataTable(concatenated);
 
